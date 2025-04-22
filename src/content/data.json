@@ -1,0 +1,60 @@
+{
+  "services": [
+    {
+      "id": "digital-marketing",
+      "title": "Digital Marketing",
+      "description": "Comprehensive digital marketing solutions to boost your online presence.",
+      "features": [
+        "Search Engine Optimization (SEO)",
+        "Pay-Per-Click Advertising (PPC)",
+        "Social Media Marketing",
+        "Content Marketing",
+        "Email Marketing"
+      ]
+    },
+    {
+      "id": "branding",
+      "title": "Branding & Identity",
+      "description": "Create a strong, memorable brand that resonates with your target audience.",
+      "features": [
+        "Brand Strategy",
+        "Logo Design",
+        "Visual Identity",
+        "Brand Guidelines",
+        "Brand Messaging"
+      ]
+    },
+    {
+      "id": "web-development",
+      "title": "Web Development",
+      "description": "Custom websites and web applications designed for performance and user experience.",
+      "features": [
+        "Responsive Web Design",
+        "E-commerce Solutions",
+        "Content Management Systems",
+        "Web Application Development",
+        "Website Maintenance"
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Sarah Johnson",
+      "position": "Marketing Director, TechCorp",
+      "quote": "Revarb transformed our digital presence with their innovative approach. Our customer engagement increased by 45% within just three months.",
+      "rating": 5
+    },
+    {
+      "name": "Michael Chen",
+      "position": "CEO, GrowthBrand",
+      "quote": "Their marketing strategy helped us reach new audiences we hadn't tapped into before. Our online conversions have doubled since working with them.",
+      "rating": 5
+    },
+    {
+      "name": "Jessica Williams",
+      "position": "Brand Manager, StyleCo",
+      "quote": "The branding campaign they designed for our product launch was exceptional. The team's creativity and attention to detail made all the difference.",
+      "rating": 5
+    }
+  ]
+}

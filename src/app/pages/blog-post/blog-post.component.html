@@ -1,0 +1,98 @@
+<div class="blog-post-page" *ngIf="post">
+  <div class="post-hero">
+    <div class="hero-background"></div>
+    <div class="blog-post-container">
+      <div class="post-header">
+        <div class="post-meta">
+          <span class="date">{{ post.date | date:'longDate' }}</span>
+          <span class="author">By {{ post.author }}</span>
+        </div>
+        <h1 class="mat-display-1">{{ post.title }}</h1>
+        <div class="tags">
+          <span *ngFor="let tag of post.tags" class="tag">{{ tag }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-post-container">
+    <div class="post-layout">
+      <div class="post-content">
+        <div class="content-wrapper">
+          <div [innerHTML]="post.content"></div>
+        </div>
+
+        <div class="post-share">
+          <h3>Share this article</h3>
+          <div class="share-buttons">
+            <button mat-icon-button color="primary" aria-label="Share on Twitter">
+              <mat-icon>share</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" aria-label="Share on Facebook">
+              <mat-icon>share</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" aria-label="Share on LinkedIn">
+              <mat-icon>share</mat-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="post-author">
+          <div class="author-avatar">{{ post.author.charAt(0) }}</div>
+          <div class="author-info">
+            <h3>{{ post.author }}</h3>
+            <p>Marketing Specialist at Revarb. Passionate about digital marketing strategies and helping businesses grow their online presence.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-sidebar">
+        <div class="sidebar-section">
+          <h3>Related Articles</h3>
+          <div class="related-posts">
+            <div class="related-post">
+              <h4>SEO Best Practices for 2023</h4>
+              <p>Stay up-to-date with the latest SEO strategies and techniques to improve your website's visibility.</p>
+              <a routerLink="/blog/seo-best-practices">Read More</a>
+            </div>
+            <div class="related-post">
+              <h4>The Ultimate Social Media Strategy Guide</h4>
+              <p>Learn how to create an effective social media strategy that drives engagement and conversions.</p>
+              <a routerLink="/blog/social-media-strategy-guide">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Subscribe to Our Newsletter</h3>
+          <p>Get the latest marketing insights delivered straight to your inbox</p>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Email Address</mat-label>
+            <input matInput placeholder="your@email.com" type="email">
+          </mat-form-field>
+          <button mat-raised-button color="primary" class="full-width">Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-navigation">
+      <button mat-button color="primary" routerLink="/blog">
+        <mat-icon>arrow_back</mat-icon> Back to Blog
+      </button>
+      <div class="post-nav-buttons">
+        <button mat-button color="primary" [disabled]="!previousPost" (click)="navigateToPreviousPost()">
+          <mat-icon>arrow_back</mat-icon> Previous Post
+        </button>
+        <button mat-button color="primary" [disabled]="!nextPost" (click)="navigateToNextPost()">
+          Next Post <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="not-found" *ngIf="!post">
+  <h2 class="mat-h2">Blog post not found</h2>
+  <p>The blog post you're looking for doesn't exist or has been removed.</p>
+  <button mat-raised-button color="primary" routerLink="/blog">Back to Blog</button>
+</div>

@@ -1,0 +1,8 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css'; // fallback
+@import 'themes/custom-theme';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F9FAFB;
+  color: #1F2937;
+}
